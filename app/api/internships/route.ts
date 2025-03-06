@@ -1,9 +1,9 @@
-import { db } from "@/lib/db"
+import { prisma } from "@/lib/prisma"
 import { NextResponse } from "next/server"
 
 export async function GET() {
   try {
-    const internships = await db.internship.findMany({
+    const internships = await prisma.internship.findMany({
       orderBy: {
         openingDate: "desc",
       },
