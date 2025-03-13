@@ -1,0 +1,59 @@
+// This is your Prisma schema file
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Job {
+  id                         Int     @id @default(autoincrement())
+  title                      String?
+  company                    String?
+  location                   String?
+  date                       String?
+  job_url                    String?
+  job_description            String?
+  applied                    Int?
+  hidden                     Int?
+  interview                  Int?
+  rejected                   Int?
+  date_loaded                String?
+  programme_name             String?
+  opening_date               String?
+  closing_date               String?
+  last_year_opening          String?
+  cv                         String? @default("No")
+  cover_letter_requirement   String? @default("No")
+  written_answers_requirement String? @default("No")
+  notes                      String?
+  status                     String?
+  job_type                   String?
+  cover_letter               String?
+  resume                     String?
+
+  @@map("jobs")
+}
+
+model FilteredJob {
+  id                Int     @id @default(autoincrement())
+  title             String?
+  company           String?
+  location          String?
+  date              String?
+  job_url           String?
+  job_description   String?
+  applied           Int?
+  hidden            Int?
+  interview         Int?
+  rejected          Int?
+  date_loaded       String?
+  job_type          String?
+  opening_date      DateTime?
+  closing_date      DateTime?
+
+  @@map("filtered_jobs")
+}
