@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import prisma from "@/lib/prisma"
 import JobList from "@/components/JobList"
 
@@ -7,6 +8,17 @@ export default async function Home() {
       id: "desc",
     },
     take: 10, // Limit to 10 results for now
+=======
+import { db } from "@/lib/db"
+import { DataTable } from "@/components/data-table"
+import { columns } from "@/components/columns"
+
+export default async function Home() {
+  const internships = await db.internship.findMany({
+    orderBy: {
+      openingDate: "desc",
+    },
+>>>>>>> 4d9dc79f685bc679d42d36e884c28ebefd262263
   })
 
   return (
@@ -26,7 +38,11 @@ export default async function Home() {
       <section className="flex-1 py-8 px-4">
         <div className="container mx-auto max-w-5xl">
           <h2 className="text-2xl font-bold mb-6">Available Internships</h2>
+<<<<<<< HEAD
           <JobList jobs={jobs} />
+=======
+          <DataTable columns={columns} data={internships} />
+>>>>>>> 4d9dc79f685bc679d42d36e884c28ebefd262263
         </div>
       </section>
     </main>

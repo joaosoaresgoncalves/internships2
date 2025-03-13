@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 // This is your Prisma schema file
+=======
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+>>>>>>> 4d9dc79f685bc679d42d36e884c28ebefd262263
 
 generator client {
   provider = "prisma-client-js"
@@ -9,6 +14,7 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+<<<<<<< HEAD
 model Job {
   id                         Int     @id @default(autoincrement())
   title                      String?
@@ -57,3 +63,16 @@ model FilteredJob {
 
   @@map("filtered_jobs")
 }
+=======
+model Internship {
+  id          String   @id @default(cuid())
+  companyName String
+  jobUrl      String
+  jobType     String
+  openingDate DateTime
+  closingDate DateTime
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+>>>>>>> 4d9dc79f685bc679d42d36e884c28ebefd262263

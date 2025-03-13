@@ -2,11 +2,14 @@
 
 # dependencies
 /node_modules
+<<<<<<< HEAD
 /.pnp
 .pnp.js
 
 # testing
 /coverage
+=======
+>>>>>>> 4d9dc79f685bc679d42d36e884c28ebefd262263
 
 # next.js
 /.next/
@@ -15,22 +18,30 @@
 # production
 /build
 
+<<<<<<< HEAD
 # misc
 .DS_Store
 *.pem
 
+=======
+>>>>>>> 4d9dc79f685bc679d42d36e884c28ebefd262263
 # debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
+<<<<<<< HEAD
 # local env files
 .env*.local
 .env
 .env.development
 .env.test
 .env.production
+=======
+# env files
+.env*
+>>>>>>> 4d9dc79f685bc679d42d36e884c28ebefd262263
 
 # vercel
 .vercel
@@ -39,6 +50,7 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+<<<<<<< HEAD
 # database
 *.db
 prisma/*.db
@@ -56,3 +68,9 @@ logs
 
 # prisma
 .prisma/
+=======
+# Database files
+*.db
+prisma/*.db
+.vercel
+>>>>>>> 4d9dc79f685bc679d42d36e884c28ebefd262263
